@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const chalk_1 = require("chalk");
+const SilentError = require("silent-error");
+function error(msg) {
+    let err = new Error(msg);
+    if (err.stack) {
+        err.stack = err.stack.replace('Error:', chalk_1.default.red('Error:'));
+    }
+    throw new SilentError(err);
+}
+exports.default = error;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXJyb3IuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3NzdXRhci9saS1zcmMvZHlmYWN0b3IvIiwic291cmNlcyI6WyJzcmMvdXRpbC9lcnJvci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlDQUEwQjtBQUMxQiw0Q0FBNEM7QUFFNUMsZUFBOEIsR0FBVztJQUN2QyxJQUFJLEdBQUcsR0FBRyxJQUFJLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUN6QixFQUFFLENBQUMsQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQztRQUNkLEdBQUcsQ0FBQyxLQUFLLEdBQUcsR0FBRyxDQUFDLEtBQU0sQ0FBQyxPQUFPLENBQUMsUUFBUSxFQUFFLGVBQUssQ0FBQyxHQUFHLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQztJQUNoRSxDQUFDO0lBQ0QsTUFBTSxJQUFJLFdBQVcsQ0FBQyxHQUFHLENBQUMsQ0FBQztBQUM3QixDQUFDO0FBTkQsd0JBTUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgY2hhbGsgZnJvbSAnY2hhbGsnO1xuaW1wb3J0ICogYXMgU2lsZW50RXJyb3IgZnJvbSAnc2lsZW50LWVycm9yJztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gZXJyb3IobXNnOiBzdHJpbmcpIHtcbiAgbGV0IGVyciA9IG5ldyBFcnJvcihtc2cpO1xuICBpZiAoZXJyLnN0YWNrKSB7XG4gICAgZXJyLnN0YWNrID0gZXJyLnN0YWNrIS5yZXBsYWNlKCdFcnJvcjonLCBjaGFsay5yZWQoJ0Vycm9yOicpKTtcbiAgfVxuICB0aHJvdyBuZXcgU2lsZW50RXJyb3IoZXJyKTtcbn1cbiJdfQ==
